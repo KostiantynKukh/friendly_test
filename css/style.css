@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1230px;  
+  margin: 0 auto;
+}
+
+/* HEADER START */
+
+.header {
+  background-color: black;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18.5px 15px;  
+}
+
+.header__logo a {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  margin-right: 10px;
+}
+
+.header__logo span {
+  height: 100%;
+  line-height: 2rem;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.header__logo:hover span {
+  color: #9B44FF;
+}
+
+.nav__item {
+  display: inline-block;
+  padding: 0 16px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.nav__link {
+  color: #fff;
+  position: relative;
+}
+
+.nav__link:before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  transition: 0.3s;
+}
+.nav__link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.menu__link {
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: .3s;
+}
+
+.menu__link_login {  
+  color: #9B44FF;
+  padding: 8px 31px;
+  background-color: #F1E4FF;
+  margin-right: 14px;  
+}
+
+.menu__link_login:hover {
+  color: #F1E4FF;
+  background-color: #d3acff;
+}
+
+.menu__link_sign-up {  
+  color: #fff;
+  padding: 8px 25px;
+  background-color: #9B44FF;  
+}
+
+.menu__link_sign-up:hover {
+  color: #9B44FF;
+  background-color: #fff;
+}
+
+/* burger start */
+.nav-bar {
+  display: none;  
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 35px;
+  height: 33px;
+  padding: 5px;
+  border: 2px solid #F1E4FF;
+  border-radius: 4px;
+}
+
+.nav-bar span {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: #F1E4FF;
+  border-radius: 2px;
+}
+
+/* burger end */
+
+@media (max-width: 992px) {  
+  .header__nav {
+    order: 1;
+  }
+  .nav-bar {
+    display: inline-flex;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    background: black;
+  }
+
+  .nav__active {
+    display: block;
+  }
+}
+/* HEADER END */
+
+
+
+
+
+
+
+
